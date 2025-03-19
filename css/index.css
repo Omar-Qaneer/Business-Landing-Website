@@ -202,3 +202,13 @@ figcaption {
     height: 60px;
     width: 80px;
 }
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 13px 0;
+    font-size: 14px;
+    position: relative;
+    width: 100%;
+}
