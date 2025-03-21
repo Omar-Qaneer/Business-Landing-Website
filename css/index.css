@@ -45,11 +45,19 @@ span {
     margin-top: 80px;
   }
 
-  .about-image img {
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.about-image img {
     width: 100%;
     max-width: 300px;
     height: auto;
     border-radius: 8px;
+    transition: all 0.3s;
 }
 
 .about-content {
@@ -120,7 +128,7 @@ span {
 
 .icons-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 30px;
     justify-content: center;
     max-width: 800px;
@@ -149,4 +157,91 @@ figcaption {
 .icon img[alt="Java"] {
     height: 60px;
     width: 80px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 40px;
+    }
+
+    .hero h1 {
+        font-size: 3em;
+    }
+
+    .intro-text {
+        font-size: 0.8em;
+    }
+
+    .projects-btn {
+        font-size: 1.1rem;
+        padding: 0.7rem 2rem;
+    }
+
+    .about-me {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .about-image img {
+        max-width: 220px;
+    }
+
+    .experience h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    figcaption {
+        font-size: 14px;
+    }
+
+    .icon img {
+        width: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.2em;
+    }
+
+    .intro-text {
+        font-size: 0.9em;
+    }
+
+    .projects-btn {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+    }
+
+    .about-me {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-image img {
+        max-width: 180px;
+    }
+
+    .experience h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .icons-grid {
+        gap: 15px;
+    }
+
+    .icon img {
+        width: 40px;
+    }
+
+    figcaption {
+        font-size: 12px;
+    }
 }
